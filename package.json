@@ -1,61 +1,45 @@
 {
-  "name": "public-holidays-cn",
+  "name": "holidays-cn",
   "description": "Check if a day is a China public holiday or a workday",
-  "version": "0.4.0",
+  "version": "0.0.0",
   "license": "MIT",
-  "module": "dist/public-holidays-cn.esm.js",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "module": "libs/holidays-cn.esm.js",
+  "main": "libs/index.js",
+  "typings": "types/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "libs",
+    "types"
   ],
   "keywords": [
     "china",
     "holiday",
     "workday"
   ],
-  "repository": "keqingrong/public-holidays-cn",
-  "author": "Qingrong Ke <keqingrong@outlook.com> (https://keqingrong.github.io/)",
+  "repository": "https://github.com/zcws/holidays-cn.git",
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why"
+    "build": "rimraf dist && tsc --noEmit false -p tsconfig.json",
+    "test": "mocha test",
+    "prepare": "pnpm build",
+    "sv": "standard-version -r"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.9.0",
-    "husky": "^4.3.0",
-    "size-limit": "^4.9.0",
-    "tsdx": "^0.14.1",
-    "tslib": "^2.0.3",
-    "typescript": "^4.1.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "rimraf": "^5.0.0",
+    "standard-version": "^9.5.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
   },
   "prettier": {
     "printWidth": 80,
     "semi": true,
     "singleQuote": true,
     "trailingComma": "es5"
-  },
-  "size-limit": [
-    {
-      "path": "dist/public-holidays-cn.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/public-holidays-cn.esm.js",
-      "limit": "10 KB"
-    }
-  ]
+  }
 }
