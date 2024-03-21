@@ -6,3 +6,4 @@ libs
 types
 yarn.lock
 pnpm-lock.yaml
+.idea
