@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/zcws/holidays-cn/compare/v1.1.0...v1.2.0) (2024-12-12)
+
+
+### Features
+
+* support 2025 ([9828c7e](https://github.com/zcws/holidays-cn/commit/9828c7e71970c07bd5b160d9effa076aac130162))
+
 ## [1.1.0](https://github.com/zcws/holidays-cn/compare/v1.0.0...v1.1.0) (2024-03-21)
 
 
