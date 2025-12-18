@@ -1,3 +1,4 @@
+import { holidaysOf2026, workdaysOf2026 } from './2026';
 import { holidaysOf2025, workdaysOf2025 } from './2025';
 import { holidaysOf2024, workdaysOf2024 } from './2024';
 import { holidaysOf2023, workdaysOf2023 } from './2023';
@@ -13,6 +14,7 @@ import { holidaysOfLaw } from './common';
 type TimeValue = Date | string | number;
 
 const holidayMap = new Map([
+  [2026, { holidays: holidaysOf2026, workdays: workdaysOf2026 }],
   [2025, { holidays: holidaysOf2025, workdays: workdaysOf2025 }],
   [2024, { holidays: holidaysOf2024, workdays: workdaysOf2024 }],
   [2023, { holidays: holidaysOf2023, workdays: workdaysOf2023 }],
@@ -32,10 +34,7 @@ export function isHoliday(date: TimeValue): boolean {
   const dateWrapper = new Date(date);
   const year = dateWrapper.getFullYear();
   const month = (dateWrapper.getMonth() + 1).toString(10).padStart(2, '0');
-  const dayOfMonth = dateWrapper
-    .getDate()
-    .toString(10)
-    .padStart(2, '0');
+  const dayOfMonth = dateWrapper.getDate().toString(10).padStart(2, '0');
   const dateFormatted = `${year}-${month}-${dayOfMonth}`; // 'YYYY-MM-DD'
   let holidayMapValue: ReturnType<typeof holidayMap.get>;
   if (holidayMap.has(year) && (holidayMapValue = holidayMap.get(year))) {
