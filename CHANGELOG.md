@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/zcws/holidays-cn/compare/v1.2.0...v1.3.0) (2026-01-04)
+
+
+### Features
+
+* 新增2026年节假日及调休日期数据并集成到假期判断模块 ([84d94f8](https://github.com/zcws/holidays-cn/commit/84d94f828b2eec54522719139f12a3cf8c4dd32e))
+
 ## [1.2.0](https://github.com/zcws/holidays-cn/compare/v1.1.0...v1.2.0) (2024-12-12)
 
 
