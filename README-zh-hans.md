@@ -1,4 +1,4 @@
-# public-holidays-cn
+# cn-holidays
 
 检查某天是否是中国法定节假日或者工作日。
 
@@ -9,13 +9,13 @@
 ## 安装
 
 ```sh
-npm install holidays-cn
+npm install cn-holidays
 ```
 
 ## 用法
 
 ```js
-import { isHoliday, isWorkday } from 'holidays-cn';
+import { isHoliday, isWorkday } from 'cn-holidays';
 
 isHoliday('2020-02-01'); // true
 

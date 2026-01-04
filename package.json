@@ -1,5 +1,5 @@
 {
-  "name": "holidays-cn",
+  "name": "cn-holidays",
   "description": "Check if a day is a China public holiday or a workday",
   "version": "1.3.0",
   "license": "MIT",

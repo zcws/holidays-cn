@@ -1,4 +1,4 @@
-# holidays-cn
+# cn-holidays
 
 Check if a day is a China public holiday or a workday.
 
@@ -9,13 +9,13 @@ English | [简体中文](./README-zh-hans.md)
 ## Installation
 
 ```sh
-npm install holidays-cn
+npm install cn-holidays
 ```
 
 ## Usage
 
 ```js
-import { isHoliday, isWorkday } from 'holidays-cn';
+import { isHoliday, isWorkday } from 'cn-holidays';
 
 isHoliday('2020-02-01'); // true
 
